@@ -1,7 +1,8 @@
 from django.urls import path
-
-from . import views
+from .views import (
+    StoriesApiView,
+)
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path('api', StoriesApiView.as_view()),
 ]

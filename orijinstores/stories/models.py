@@ -13,6 +13,11 @@ class Story(models.Model):
     artwork = models.FileField(upload_to="artworks/", blank=True)
     audio_file = models.FileField(upload_to="audios/")
     created_at = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default="False")
+    author = models.CharField(max_length=100, default="")
+
+    def __str__(self) -> str:
+        return self.title
 
     class Meta:
         verbose_name_plural = "Stories"

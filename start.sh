@@ -1,1 +1,1 @@
-gunicorn orijinstores.wsgi --bind 0.0.0.0:8000 --workers 4
+gunicorn orijinstores.wsgi --bind 0.0.0.0:8000 --workers 1 --static-map /static:/orijinstores/static

@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-t0gct=*n6*n#=8gm)q%(vxk$$9jdz7)x*6-h^bxx7tflg!9_%n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.184.251.73']
+ALLOWED_HOSTS = ['18.184.251.73', 'localhost', '127.0.0.1']
 
 
 
@@ -84,12 +84,8 @@ WSGI_APPLICATION = "orijinstores.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "orijinbees",
-        "USER": "mbquat",
-        "PASSWORD": "mbqUatpa55",
-        "HOST":"52.28.217.248",
-        "PORT":5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
